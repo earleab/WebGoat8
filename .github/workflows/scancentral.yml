@@ -40,7 +40,7 @@ jobs:
         env:                                            
           URL: ${{ secrets.SSC_URL }}
           TOKEN: ${{ secrets.SSC_UPLOAD_TOKEN }}
-          APPLICATION: "rjl-test-gha"
+          APPLICATION: "test rjl"
           VERSION: "1"
           BUILD_OPTS: "-bt mvn"
       ### Archive ScanCentral Client logs on failure ###
