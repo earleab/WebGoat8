@@ -37,7 +37,7 @@ jobs:
       #   For other build tools, add your build commands to the workflow to download necessary dependencies and prepare according to Fortify SCA documentation.
       - name: Perform SAST Scan
         run: echo "BUILD OPTS = " + $BUILD_OPTS
-        run: scancentral -ssctoken $TOKEN -sscurl ${URL} start $BUILD_OPTS -upload -application "Demo Test RJL" -version $VERSION -uptoken $TOKEN
+        #run: scancentral -ssctoken $TOKEN -sscurl ${URL} start $BUILD_OPTS -upload -application "Demo Test RJL" -version $VERSION -uptoken $TOKEN
         env:                                            
           URL: ${{ secrets.SSC_URL }}
           TOKEN: ${{ secrets.SSC_UPLOAD_TOKEN }}
