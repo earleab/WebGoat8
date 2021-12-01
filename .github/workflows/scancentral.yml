@@ -9,7 +9,7 @@ on:
 jobs:                                                  
   Fortify-SAST:
     # Use the appropriate runner for building your source code
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, fortify]
     steps:
       # Check out source code
       - name: Check Out Source Code
@@ -41,7 +41,7 @@ jobs:
         env:                                            
           URL: ${{ secrets.SSC_URL }}
           TOKEN: ${{ secrets.SSC_UPLOAD_TOKEN }}
-          APPLICATION: "\"Demo Test RJL\""
+          APPLICATION: "Webgoat8-GitHub"
           VERSION: "1.0"
           BUILD_OPTS: "-bt mvn"
       ### Archive ScanCentral Client logs on failure ###
